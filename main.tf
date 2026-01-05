@@ -3,7 +3,7 @@ resource "aws_instance" "kubernetes" {
   ami           = local.ami_id
   instance_type = "t3.micro"
   # instance_type = "t3.medium"     # for roboshop to create 11 images we need higher 
-  vpc_security_group_ids = [aws_security_group.allow-all-docker.id]
+  vpc_security_group_ids = [aws_security_group.allow-all-kubernetes.id]
 
 # need more for terraform
   root_block_device {
