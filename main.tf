@@ -1,8 +1,8 @@
 # create instance
 resource "aws_instance" "kubernetes" {
   ami           = local.ami_id
-  # instance_type = "t3.micro"
-  instance_type = "t3.medium"     # for kubernetes we need higher 
+  instance_type = "t3.micro"
+  # instance_type = "t3.medium"     # for kubernetes we need higher 
   vpc_security_group_ids = [aws_security_group.allow-all-kubernetes.id]
 
 # need more for terraform
