@@ -4,7 +4,8 @@ data "aws_ami" "ourami"{
 
     filter {
     name   = "name"
-    values = ["RHEL-9-DevOps-Practice"]
+    # values = ["RHEL-9-DevOps-Practice"]   # Old AMi
+    values = ["Redhat-9-DevOps-Practice"]   # New AMI
   }
 
   filter {
