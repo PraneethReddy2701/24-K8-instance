@@ -43,9 +43,9 @@ resource "aws_security_group" "allow-all-kubernetes" {
     ipv6_cidr_blocks = ["::/0"]
   }
 
-#   lifecycle {
-#     create_before_destroy = true
-#   }
+  lifecycle {
+    create_before_destroy = true
+  }
 
   tags = merge(
     local.common_tags,
